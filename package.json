@@ -10,6 +10,7 @@
 		"Other"
 	],
 	"icon": "images/ssl_logo.png",
+	"license": "SEE LICENSE IN LICENSE.md",
 	"activationEvents": [
 		"onCommand:symfony-service-locator.gotoClassServiceDefinition",
 		"onCommand:symfony-service-locator.gotoServiceDefinitionSelection"
