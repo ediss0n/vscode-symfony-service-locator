@@ -91,12 +91,12 @@ function goToConfigFile(configPath, offset)
 {
 	vscode.window.showTextDocument(vscode.workspace.openTextDocument(configPath)).then(
 		(editor) => {
-			const lineEnd = editor.document.getText()
-				.substr(offset + 1)
-				.search(/\n+/);
+			const docText = editor.document.getText();
+			const lineStart = docText.substr(offset).search(/[^\n\s\t]/);
+			const lineEnd = docText.substr(offset + 1).search(/\n+/);
 
 			const foundRange = new vscode.Range(
-			 	editor.document.positionAt(offset),
+			 	editor.document.positionAt(offset + lineStart),
 			 	editor.document.positionAt(offset + lineEnd + 1)
 			);
 

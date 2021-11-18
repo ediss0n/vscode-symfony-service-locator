@@ -2,7 +2,7 @@
 	"name": "symfony-service-locator",
 	"displayName": "Symfony Service Locator",
 	"description": "Searches for symfony service definition in corresponding xml or yaml configuration files",
-	"version": "0.0.1",
+	"version": "0.0.2",
 	"engines": {
 		"vscode": "^1.61.0"
 	},
